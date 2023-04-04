@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     setTimeout(function () {
       $(".notification").removeClass("show");
-    }, 5000);
+    }, 2000);
   });
 
   function hourUpdater() {
