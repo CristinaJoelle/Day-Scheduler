@@ -18,6 +18,8 @@ then the evens I've entered will still be there.
 
 ## Deployed Site and Screenshots
 
+https://cristinajoelle.github.io/Day-Scheduler/
+
 ![Screenshot of the top of the webpage](/Assets/Screenshots/top-of-page.png)
 ![Screenshot fo the bottom of the page](./Assets/Screenshots/bottom-of-assignment.png)
 ![Screenshot showing local storage notification](./Assets/Screenshots/localstorage-alert.png)
