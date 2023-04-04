@@ -33,6 +33,8 @@ $(document).ready(function () {
 
   hourUpdater();
   setInterval(hourUpdater, 15000);
+  $("#hour-7 .description").val(localStorage.getItem("hour-7"));
+  $("#hour-8 .description").val(localStorage.getItem("hour-8"));
   $("#hour-9 .description").val(localStorage.getItem("hour-9"));
   $("#hour-10 .description").val(localStorage.getItem("hour-10"));
   $("#hour-11 .description").val(localStorage.getItem("hour-11"));
