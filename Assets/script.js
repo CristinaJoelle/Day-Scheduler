@@ -22,10 +22,10 @@ $(document).ready(function () {
         $(this).addClass("past");
       } else if (blockHour === currentHour) {
         $(this).removeClass("past");
-        $(this).addClass("present");
+        $(this).addClass("current");
       } else {
         $(this).removeClass("past");
-        $(this).removeClass("present");
+        $(this).removeClass("current");
         $(this).addClass("future");
       }
     });
@@ -33,22 +33,9 @@ $(document).ready(function () {
 
   hourUpdater();
   setInterval(hourUpdater, 15000);
-  $("#hour-7 .description").val(localStorage.getItem("hour-7"));
-  $("#hour-8 .description").val(localStorage.getItem("hour-8"));
-  $("#hour-9 .description").val(localStorage.getItem("hour-9"));
-  $("#hour-10 .description").val(localStorage.getItem("hour-10"));
-  $("#hour-11 .description").val(localStorage.getItem("hour-11"));
-  $("#hour-12 .description").val(localStorage.getItem("hour-12"));
-  $("#hour-13 .description").val(localStorage.getItem("hour-13"));
-  $("#hour-14 .description").val(localStorage.getItem("hour-14"));
-  $("#hour-15 .description").val(localStorage.getItem("hour-15"));
-  $("#hour-16 .description").val(localStorage.getItem("hour-16"));
-  $("#hour-17 .description").val(localStorage.getItem("hour-17"));
-  $("#hour-18 .description").val(localStorage.getItem("hour-18"));
-  $("#hour-19 .description").val(localStorage.getItem("hour-19"));
-  $("#hour-20 .description").val(localStorage.getItem("hour-20"));
-  $("#hour-21 .description").val(localStorage.getItem("hour-21"));
-  $("#hour-22 .description").val(localStorage.getItem("hour-22"));
+  for (var i = 8; i < 19; i++) {
+    $("#hour-" + i + " textarea").val(localStorage.getItem("hour-" + i));
+  }
 
-  $("#currentDay").text(dayjs().format("dddd, MMMM D, YYYY"));
+  $("#today").text(dayjs().format("dddd, MMMM D, YYYY"));
 });
